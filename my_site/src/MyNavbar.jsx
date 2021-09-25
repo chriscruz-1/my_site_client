@@ -11,12 +11,10 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText
 } from 'reactstrap';
 
 const MyNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   return (
     <div>
       <Navbar color="dark" dark expand="md">
@@ -27,32 +25,24 @@ const MyNavbar = () => {
             <NavItem>
               <NavLink href="/about/">About</NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-            </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Options
+                Projects
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  Option 1
+                  <a className="dropdown-item" href="/">One Rep Max Calculator (In Progress)</a>
                 </DropdownItem>
                 <DropdownItem>
-                  Option 2
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Reset
+                  <a className="dropdown-item" href='/'>Workout Tracker (In Progress)</a>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
         </Collapse>
       </Navbar>
     </div>
   );
-}
+  }
 
 export default MyNavbar;
