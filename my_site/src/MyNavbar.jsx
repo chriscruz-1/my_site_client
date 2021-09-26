@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Image from 'react-bootstrap/Image';
 
 const MyNavbar = () => {
 
@@ -31,17 +32,17 @@ const MyNavbar = () => {
           <Nav className="justify-content-center">
             <Nav.Item>
               <Nav.Link href="mailto:chriscruz.1@icloud.com">
-                <img alt="Email" src="email.png"></img>
+                <Image src="email.png" rounded/>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="http://www.linkedin.com/in/chriscruz-1">
-                <img alt="LinkedIn" src="linkedin.png"></img>
+                <Image src="linkedin.png" rounded/>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="http://www.github.com/chriscruz-1">
-                <img alt="Github" src="github.png"></img>
+                <Image src="github.png" rounded/>
               </Nav.Link>
             </Nav.Item>
           </Nav>
