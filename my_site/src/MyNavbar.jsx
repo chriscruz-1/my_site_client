@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -7,14 +7,15 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const MyNavbar = () => {
-  // const [isOpen, setIsOpen] = useState(false);
+
   return (
     <Container fluid>
       <Row>
-      <Navbar bg="dark" variant="dark" style={{textAlign: "center"}}>
+      <Navbar bg="light" variant="light" style={{textAlign: "center"}}>
         <Col>
           <Container>
             <Nav className="justify-content-center">
+              <Nav.Link href="home">Home</Nav.Link>
               <Nav.Link href="#about">About</Nav.Link>
               <NavDropdown title="Projects" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="#1rmc">1 Rep Max Calculator</NavDropdown.Item>
@@ -26,9 +27,34 @@ const MyNavbar = () => {
         <Col md={2}>
           <Navbar.Brand href="#home">Chris Cruz</Navbar.Brand>
         </Col>
-        <Col>Contacts</Col>
+        <Col>
+          <Nav className="justify-content-center">
+            <Nav.Item>
+              <Nav.Link href="mailto:chriscruz.1@icloud.com">
+                <img alt="Email" src="email.png"></img>
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="http://www.linkedin.com/in/chriscruz-1">
+                <img alt="LinkedIn" src="linkedin.png"></img>
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="http://www.github.com/chriscruz-1">
+                <img alt="Github" src="github.png"></img>
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
+        </Col>
         </Navbar>
       </Row>
+
+      {/* <Row>
+        Put in footer:
+        <div>Icons made by <a href="https://www.flaticon.com/authors/iconixar" title="iconixar">iconixar</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+      </Row> */}
     </Container>
   );
 }
