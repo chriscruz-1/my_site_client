@@ -1,7 +1,6 @@
 import React from 'react';
-import './Home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MyNarbar from './MyNavbar'
+import MyNarbar from './myNavbar'
 import Figure from 'react-bootstrap/Figure'
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -24,6 +23,7 @@ const Home = () => {
                 src="prof_shoot.png"
                 style={{display: "block", margin: "auto", borderRadius: "70%"}}
               />
+              <br/>
               <Figure.Caption style={{textAlign: "center"}}>
                 Hello, I'm Chris, a full stack web developer. Welcome to my site!
               </Figure.Caption>
