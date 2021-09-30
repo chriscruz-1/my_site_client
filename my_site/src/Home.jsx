@@ -1,15 +1,23 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MyNarbar from './myNavbar'
-import Image from 'react-bootstrap/Image';
+import Figure from 'react-bootstrap/Figure'
 
 const Home = () => {
   return (
     <>
       <MyNarbar />
-      <Image fluid
-        src="explorer.png"
-      />
+      <Figure>
+        <Figure.Image
+          src="explorer.png"
+          alt="explorer photo"
+          width="100%"
+          style={{display: "block", marginBottom: 0}}
+        />
+        <Figure.Caption>
+
+        </Figure.Caption>
+      </Figure>
     </>
   );
 }
