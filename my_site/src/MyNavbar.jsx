@@ -5,7 +5,6 @@ import Col from 'react-bootstrap/Col';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Image from 'react-bootstrap/Image';
 
 const MyNavbar = () => {
 
@@ -32,30 +31,23 @@ const MyNavbar = () => {
           <Nav className="justify-content-center">
             <Nav.Item>
               <Nav.Link href="mailto:chriscruz.1@icloud.com">
-                <Image src="email.png" rounded/>
+                <i class="far fa-envelope fa-lg"></i>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="http://www.linkedin.com/in/chriscruz-1">
-                <Image src="linkedin.png" rounded/>
+                <i class="fab fa-linkedin fa-lg"></i>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="http://www.github.com/chriscruz-1">
-                <Image src="github.png" rounded/>
+                <i class="fab fa-github fa-lg"></i>
               </Nav.Link>
             </Nav.Item>
           </Nav>
         </Col>
         </Navbar>
       </Row>
-
-      {/* <Row>
-        Put in footer:
-        <div>Icons made by <a href="https://www.flaticon.com/authors/iconixar" title="iconixar">iconixar</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-        <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-        <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-      </Row> */}
     </Container>
   );
 }
