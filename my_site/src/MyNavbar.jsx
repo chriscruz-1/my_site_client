@@ -31,17 +31,17 @@ const MyNavbar = () => {
           <Nav className="justify-content-center">
             <Nav.Item>
               <Nav.Link href="mailto:chriscruz.1@icloud.com">
-                <i class="far fa-envelope fa-lg"></i>
+                <i className="far fa-envelope fa-lg"></i>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="http://www.linkedin.com/in/chriscruz-1">
-                <i class="fab fa-linkedin fa-lg"></i>
+                <i className="fab fa-linkedin fa-lg"></i>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="http://www.github.com/chriscruz-1">
-                <i class="fab fa-github fa-lg"></i>
+                <i className="fab fa-github fa-lg"></i>
               </Nav.Link>
             </Nav.Item>
           </Nav>
