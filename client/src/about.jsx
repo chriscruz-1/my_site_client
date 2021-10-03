@@ -1,8 +1,16 @@
 import React from 'react';
+import Image from 'react-bootstrap/Image';
+import Container from 'react-bootstrap/Container';
 
 const About = () => {
   return(
-    <p>This is my about page!</p>
+    <Container fluid>
+      <Image 
+        src="prof_shoot.png"
+        width="50%"
+        roundedCircle
+      />
+    </Container>
   );
 }
 
