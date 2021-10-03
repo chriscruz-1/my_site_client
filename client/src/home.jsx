@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MyNavbar from './myNavbar';
 import Image from 'react-bootstrap/Image'
 
 const Home = () => {
@@ -31,7 +30,6 @@ const Home = () => {
 
   return (
     <>
-      <MyNavbar />
       {(useWindowDimensions().width > 1100) ? 
         <p style={{ fontSize: "2em",display: "inline", position: "relative", top: "10em", left: "10em", zIndex: "2"}}>Web developer. Explorer. Learner.</p>
         :
