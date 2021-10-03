@@ -26,7 +26,7 @@ const MyNavbar = () => {
               <Nav className="justify-content-center">
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/about">About</Nav.Link>
-                <NavDropdown title="projects" id="navbarScrollingDropdown">
+                <NavDropdown title="Projects" id="navbarScrollingDropdown">
                   <NavDropdown.Item href="/orm">1 Rep Max Calculator</NavDropdown.Item>
                   <NavDropdown.Item href="/fitnesstracker">Fitness Tracker</NavDropdown.Item>
                 </NavDropdown>
