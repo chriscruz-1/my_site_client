@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import MyNavbar from './myNavbar';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MyNavbar />
+    <BrowserRouter>
+      <MyNavbar />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
