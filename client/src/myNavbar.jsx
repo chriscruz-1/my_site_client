@@ -7,7 +7,6 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import About from './about';
 import Home from './home';
-
 import {
   BrowserRouter as Router,
   Switch,
