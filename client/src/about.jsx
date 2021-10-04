@@ -12,29 +12,38 @@ const About = ({pStyleProp}) => {
     <>
       <Container fluid>
         <Row>
-          <Col>
-            <Image 
-              src="prof_shoot.png"
-              width="100%"
-              roundedCircle
-            />
-          </Col>
           {(useWindowDimensions().width > 1000) ? 
-            <Col fluid>
-              <p style={pStyle}>
-                Full stack web developer. Recently graduated from University of California, Davis with a Bachelors of Science in Computer Science.
-              </p>
-              <p style={pStyle}>
-                About 1.5 years of experience
-              </p>
-              <hr/>
-              <SkillsExp />
+            <>
+              <Col>
+                <Image 
+                  src="prof_shoot.png"
+                  width="100%"
+                  roundedCircle
+                />
+              </Col>
+              <Col fluid>
+                <p style={pStyle}>
+                  Full stack web developer. Recently graduated from University of California, Davis with a Bachelors of Science in Computer Science.
+                </p>
+                <p style={pStyle}>
+                  About 1.5 years of experience
+                </p>
+                <hr/>
+                <SkillsExp />
+              </Col>
+            </>
+            :
+            <Col>
+            <Image 
+                src="prof_shoot_horiz.png"
+                width="100%"
+                
+              />
             </Col>
-              :
-              null            
           }   
         </Row>
         <Row>
+          
           {(useWindowDimensions().width <= 1000) ?
             <>
               <span style={pStyle}>
