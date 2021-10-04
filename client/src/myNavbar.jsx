@@ -27,8 +27,8 @@ const MyNavbar = () => {
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/about">About</Nav.Link>
                 <NavDropdown title="Projects" id="navbarScrollingDropdown">
-                  <NavDropdown.Item href="/orm">1 Rep Max Calculator</NavDropdown.Item>
-                  <NavDropdown.Item href="/fitnesstracker">Fitness Tracker</NavDropdown.Item>
+                  <NavDropdown.Item href="/orm">1 Rep Max Calculator (In progress)</NavDropdown.Item>
+                  <NavDropdown.Item href="/fitnesstracker">Fitness Tracker (In progress)</NavDropdown.Item>
                 </NavDropdown>
               </Nav>
             </Container>
