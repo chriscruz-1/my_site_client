@@ -21,7 +21,7 @@ const About = ({pStyleProp}) => {
                   roundedCircle
                 />
               </Col>
-              <Col fluid>
+              <Col>
                 <p style={pStyle}>
                   Full stack web developer. Recently graduated from University of California, Davis with a Bachelors of Science in Computer Science.
                 </p>
