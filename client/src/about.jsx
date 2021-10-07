@@ -7,7 +7,15 @@ import useWindowDimensions from './use_window_dimensions';
 import SkillsExp from './about_skills_exp';
 
 const About = ({pStyleProp}) => {
-  let pStyle = pStyleProp === undefined ? {className: "justify-content-center", marginTop: "3em"} : pStyleProp;
+  let pStyle = pStyleProp === undefined ? {marginTop: "2em"} : pStyleProp;
+  
+  //For setting my experience time.
+  let now = new Date();
+  let start = new Date(2020, 3, 23, 8, 0, 0, 0);
+  let difference = now - start; //result is in milliseconds
+  let months = difference / 1000 / 60 / 60 / 24 / 30;
+  let years = months / 12;
+
   return(
     <>
       <Container fluid>
@@ -23,12 +31,11 @@ const About = ({pStyleProp}) => {
               </Col>
               <Col>
                 <p style={pStyle}>
-                  Full stack web developer. Recently graduated from University of California, Davis with a Bachelors of Science in Computer Science.
+                  Full stack web developer. Graduated in September 2021 from University of California, Davis with a Bachelors of Science in Computer Science.
                 </p>
                 <p style={pStyle}>
-                  About 1.5 years of experience
+                  About {years.toFixed(2)} years of experience.
                 </p>
-                <hr/>
                 <SkillsExp />
               </Col>
             </>
@@ -47,13 +54,12 @@ const About = ({pStyleProp}) => {
           {(useWindowDimensions().width <= 1000) ?
             <>
               <span style={pStyle}>
-                Full stack web developer. Recently graduated from University of California, Davis with a Bachelors of Science in Computer Science.
+                Full stack web developer. Graduated in September 2021 from University of California, Davis with a Bachelors of Science in Computer Science.
               </span>
               <p/>
               <span>
-                About 1.5 years of experience
+                About {years.toFixed(2)} years of experience.
               </span>
-              <hr/>
               <SkillsExp />
             </>
             :
