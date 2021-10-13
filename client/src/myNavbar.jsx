@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import About from './about';
 import Home from './home';
+import Orm from './orm';
 import {
   BrowserRouter as Router,
   Switch,
@@ -61,6 +62,7 @@ const MyNavbar = () => {
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route path="/about" component={About}/>
+          <Route path="/orm" component={Orm}/>
           <Redirect to="/"/>
         </Switch>
     </Router>
