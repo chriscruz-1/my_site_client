@@ -3,12 +3,15 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row'
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 const Orm = ({
   appTitleStyle = {textAlign: "center"},
   appContainerStyle = {marginTop: "20px"},
-  maxWeight = 180,
-  maxReps = 20
+  maxWeight = 220,
+  maxReps = 20,
+  cardStyle = {marginTop: "20px"}
 }) => {
   //Hooks
   let [ username, setUsername ] = useState(null);
@@ -115,8 +118,12 @@ const Orm = ({
         <Row>
           {username && exercise && weight && numReps &&
             <>
-              <h2>Your estimated one rep max for {exercise} is {getPR()} lbs! Great job {username}!</h2>
-              <h4>Your one rep max was calculated with <a href="https://www.athlegan.com/calculate-1rm">Brzycki's formula</a></h4>
+              <Card style={cardStyle}>
+                <Card.Header>Your estimated one rep max for {exercise} is {getPR()} lbs. Great job {username}!</Card.Header>
+                <ListGroup variant="flush">
+                  <ListGroup.Item>Your one rep max was calculated with <a href="https://www.athlegan.com/calculate-1rm">Brzycki's formula</a></ListGroup.Item>
+                </ListGroup>
+              </Card>
             </>
           }
         </Row>
