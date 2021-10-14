@@ -39,7 +39,7 @@ const MyNavbar = () => {
             <Col>
               <Nav className="justify-content-center">
                 <Nav.Item>
-                  <Nav.Link href="mailto:chriscruz.1@icloud.com">
+                  <Nav.Link href="mailto:chriscruz594187@gmail.com">
                     <i className="far fa-envelope fa-lg"></i>
                   </Nav.Link>
                 </Nav.Item>
