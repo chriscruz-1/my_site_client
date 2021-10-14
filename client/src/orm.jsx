@@ -72,7 +72,7 @@ const Orm = ({
               </Form.Group>
             </Col>
           </Row>
-          <Row>
+          <Row style={{marginTop: "20px"}}>
             <Col>
                 <Form.Group>
                   <Form.FloatingLabel controlId="floatingSelect" label="exercise">
