@@ -9,7 +9,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 const Orm = ({
   appTitleStyle = {textAlign: "center"},
   appContainerStyle = {marginTop: "20px"},
-  maxWeight = 220,
+  maxWeight = 500,
   maxReps = 20,
   cardStyle = {marginTop: "20px"}
 }) => {
