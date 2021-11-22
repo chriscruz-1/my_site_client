@@ -55,14 +55,14 @@ const SkillsExp = () => {
         </thead>
         <tbody>
           <tr>
-            <th>Intel</th>
-            <td>Software Intern</td>
-            <td>Jan - Aug 2021</td>
-          </tr>
-          <tr>
             <th>UC Davis</th>
             <td>Web Developer</td>
             <td>Apr 2020 - Jan 2021 | Aug 2021 - Present</td>
+          </tr>
+          <tr>
+            <th>Intel</th>
+            <td>Software Intern</td>
+            <td>Jan - Aug 2021</td>
           </tr>
         </tbody>
       </Table>
