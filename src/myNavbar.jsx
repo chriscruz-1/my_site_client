@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Work from './work';
 import About from './about';
 import Home from './home';
 import Orm from './orm';
@@ -27,6 +28,7 @@ const MyNavbar = () => {
                 <Nav className="justify-content-center">
                   <Nav.Link href="/">Home</Nav.Link>
                   <Nav.Link href="/about">About</Nav.Link>
+                  <Nav.Link href="/work">Work</Nav.Link>
                   <NavDropdown title="Projects" id="navbarScrollingDropdown">
                     <NavDropdown.Item href="/orm">1 Rep Max Calculator</NavDropdown.Item>
                     <NavDropdown.Item href="/weather_dashboard">Weather Dashboard (In progress)</NavDropdown.Item>
@@ -64,6 +66,7 @@ const MyNavbar = () => {
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route path="/about" component={About}/>
+          <Route path="/work" component={Work}/>
           <Route path="/orm" component={Orm}/>
           <Route path="/weather_dashboard" component={WeatherDashboard}/>
           <Redirect to="/"/>
