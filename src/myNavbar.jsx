@@ -36,12 +36,12 @@ const MyNavbar = () => {
               </Container>
             </Col>
             <Col md={2}>
-              <Navbar.Brand href="#home">Chris Cruz</Navbar.Brand>
+              <Navbar.Brand href="/">Chris Cruz</Navbar.Brand>
             </Col>
             <Col>
               <Nav className="justify-content-center">
                 <Nav.Item>
-                  <Nav.Link href="mailto:chriscruz594187@gmail.com">
+                  <Nav.Link href="mailto:me@lifeofchriscruz.com">
                     <i className="far fa-envelope fa-lg"></i>
                   </Nav.Link>
                 </Nav.Item>
