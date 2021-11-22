@@ -34,7 +34,7 @@ const About = ({pStyleProp}) => {
                   Full stack web developer. Graduated in September 2021 from University of California, Davis with a Bachelors of Science in Computer Science.
                 </p>
                 <p style={pStyle}>
-                  About {years.toFixed(2)} years of experience.
+                  About {years.toFixed(2)} years of experience in web development.
                 </p>
                 <SkillsExp />
               </Col>
@@ -58,7 +58,7 @@ const About = ({pStyleProp}) => {
               </span>
               <p/>
               <span>
-                About {years.toFixed(2)} years of experience.
+                About {years.toFixed(2)} years of experience in web development.
               </span>
               <SkillsExp />
             </>

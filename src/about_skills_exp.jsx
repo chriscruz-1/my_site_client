@@ -13,37 +13,37 @@ const SkillsExp = () => {
         <tbody>
           <tr>
             <td>Javascript</td>
+            <td>React</td>
+            <td>VX.js</td>
             <td>Python</td>
-            <td>SQL</td>
-            <td>jQuery</td>
           </tr>
           <tr>
-            <td>Ruby</td>
+            <td>Django</td>
+            <td>Bootstrap</td>
+            <td>React-Bootstrap</td>
             <td>HTML</td>
+          </tr>
+          <tr>
             <td>CSS</td>
+            <td>Git</td>
+          </tr>
+          <tr>
+            <td>SQL</td>
+            <td>jQuery</td>
+            <td>Ruby</td>
             <td>C++</td>
           </tr>
           <tr>
-            <td>Markdown</td>
-            <td>Latex</td>
-          </tr>
-          <tr>
-            <td>React</td>
-            <td>Django</td>
             <td>Node.js</td>
             <td>Express.js</td>
-          </tr>
-          <tr>
             <td>Ruby on Rails</td>
-            <td>Bootstrap</td>
-            <td>Pandas</td>
-            <td>React-Bootstrap</td>
+            <td>d3.js</td>
           </tr>
           <tr>
+            <td>Pandas</td>
             <td>Numpy</td>
             <td>PyMySQL</td>
-            <td>Cloud Foundry</td>
-            <td>Git</td>
+            <td>CloudFoundry</td>
           </tr>
         </tbody>
       </Table>
