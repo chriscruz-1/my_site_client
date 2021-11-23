@@ -53,7 +53,7 @@ const WeatherDashboard = () => {
           <Card>
             <Card.Img src={data.forecast.forecastday[0].day.condition.icon}/>
             <Card.Body>
-              <Card.Title>Tomorrow's weather for {city} is:</Card.Title>
+              <Card.Title>Tomorrow's weather for {city} will be:</Card.Title>
               <Card.Text>
                 <>
                   <p>{data.forecast.forecastday[0].day.condition.text}</p>
