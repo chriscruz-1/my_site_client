@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 
 const WeatherDashboard = () => {
 
-  const apiKey = "";
+  const apiKey = process.env.WEATHER_API_KEY;
 
   let [data, setData] = useState(null);
   let [city, setCity] = useState("San Francisco");
