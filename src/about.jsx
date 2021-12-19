@@ -3,10 +3,15 @@ import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Resume from './ChrisCruz.pdf';
+
 import useWindowDimensions from './use_window_dimensions';
 import SkillsExp from './about_skills_exp';
 
-const About = ({pStyleProp}) => {
+const About = ({
+  pStyleProp,
+  resumeBtnStyle={margin: "10px auto"}
+}) => {
   let pStyle = pStyleProp === undefined ? {marginTop: "2em"} : pStyleProp;
   
   //For setting my experience time.
@@ -36,6 +41,9 @@ const About = ({pStyleProp}) => {
                 <p style={pStyle}>
                   About {years.toFixed(2)} years of experience in web development.
                 </p>
+                <div className="resumeBtn" style={resumeBtnStyle}>
+                  <a href={Resume} target="_blank">Download Resume</a>
+                </div>
                 <SkillsExp />
               </Col>
             </>
@@ -44,14 +52,12 @@ const About = ({pStyleProp}) => {
             <Image 
                 src="prof_shoot_horiz.png"
                 width="100%"
-                
               />
             </Col>
           }   
         </Row>
         <Row>
-          
-          {(useWindowDimensions().width <= 1000) ?
+          {(useWindowDimensions().width <= 1000) &&
             <>
               <span style={pStyle}>
                 Full stack web developer. Graduated in September 2021 from University of California, Davis with a Bachelors of Science in Computer Science.
@@ -60,10 +66,11 @@ const About = ({pStyleProp}) => {
               <span>
                 About {years.toFixed(2)} years of experience in web development.
               </span>
+              <div className="resumeBtn" style={resumeBtnStyle}>
+                <a href={Resume} target="_blank">Download Resume</a>
+              </div>
               <SkillsExp />
             </>
-            :
-            null
           }
         </Row>
       </Container>

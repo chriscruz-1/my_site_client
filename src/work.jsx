@@ -4,11 +4,18 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Alert from 'react-bootstrap/Alert';
 import Card from 'react-bootstrap/Card';
-// import Button from 'react-bootstrap/Button';
+import Resume from './ChrisCruz.pdf';
 
-const Work = () => {
+const Work = ({
+  resumeBtnStyle={margin: "10px 10px"}
+}) => {
   return(
     <Container>
+      <Row>
+        <div className = "resumeBtn" style={resumeBtnStyle, {textAlign: "center"}}>
+            <a href={Resume} target="_blank">Download Resume</a>
+        </div>
+      </Row>
       <Row>
         <Alert className="text-center" key={"work_title"} variant='light'>
           Previous Work:
