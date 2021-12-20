@@ -7,14 +7,25 @@ import Card from 'react-bootstrap/Card';
 import Resume from './ChrisCruz.pdf';
 
 const Work = ({
-  resumeBtnStyle={margin: "10px 10px"}
+  resumeBtnStyle={
+    margin: "10px auto", 
+    background: "lightGray",
+    border: "5px solid lightGray",
+    opacity: "0.4",
+    borderRadius: "12px",
+    textAlign: "center"
+  },
+  aTagStyle={
+    color: "black",
+    opacity: "1"
+  }
 }) => {
   return(
     <Container>
       <Row>
-        <div className = "resumeBtn" style={resumeBtnStyle, {textAlign: "center"}}>
-            <a href={Resume} target="_blank">Download Resume</a>
-        </div>
+        <span className="resumeBtn" style={resumeBtnStyle}>
+          <a href={Resume} style={aTagStyle} target="_blank">Download Resume</a>
+        </span>
       </Row>
       <Row>
         <Alert className="text-center" key={"work_title"} variant='light'>

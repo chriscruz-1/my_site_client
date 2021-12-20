@@ -10,7 +10,18 @@ import SkillsExp from './about_skills_exp';
 
 const About = ({
   pStyleProp,
-  resumeBtnStyle={margin: "10px auto"}
+  resumeBtnStyle={
+    margin: "10px auto", 
+    background: "lightGray",
+    border: "5px solid lightGray",
+    opacity: "0.4",
+    borderRadius: "12px",
+    textAlign: "center"
+  },
+  aTagStyle={
+    color: "black",
+    opacity: "1"
+  }
 }) => {
   let pStyle = pStyleProp === undefined ? {marginTop: "2em"} : pStyleProp;
   
@@ -41,9 +52,9 @@ const About = ({
                 <p style={pStyle}>
                   About {years.toFixed(2)} years of experience in web development.
                 </p>
-                <div className="resumeBtn" style={resumeBtnStyle}>
-                  <a href={Resume} target="_blank">Download Resume</a>
-                </div>
+                <span className="resumeBtn" style={resumeBtnStyle}>
+                  <a href={Resume} style={aTagStyle} target="_blank">Download Resume</a>
+                </span>
                 <SkillsExp />
               </Col>
             </>
@@ -66,9 +77,9 @@ const About = ({
               <span>
                 About {years.toFixed(2)} years of experience in web development.
               </span>
-              <div className="resumeBtn" style={resumeBtnStyle}>
-                <a href={Resume} target="_blank">Download Resume</a>
-              </div>
+              <span className="resumeBtn" style={resumeBtnStyle}>
+                <a href={Resume} style={aTagStyle} target="_blank">Download Resume</a>
+              </span>
               <SkillsExp />
             </>
           }
