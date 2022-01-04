@@ -24,7 +24,7 @@ const Work = ({
     <Container>
       <Row>
         <span className="resumeBtn" style={resumeBtnStyle}>
-          <a href={Resume} style={aTagStyle} target="_blank">Download Resume</a>
+          <a href={Resume} style={aTagStyle} target="_blank" rel="noreferrer">Download Resume</a>
         </span>
       </Row>
       <Row>
