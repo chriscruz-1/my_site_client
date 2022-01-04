@@ -53,7 +53,7 @@ const About = ({
                   About {years.toFixed(2)} years of experience in web development.
                 </p>
                 <span className="resumeBtn" style={resumeBtnStyle}>
-                  <a href={Resume} style={aTagStyle} target="_blank">Download Resume</a>
+                  <a href={Resume} style={aTagStyle} target="_blank" rel="noreferrer">Download Resume</a>
                 </span>
                 <SkillsExp />
               </Col>
@@ -78,7 +78,7 @@ const About = ({
                 About {years.toFixed(2)} years of experience in web development.
               </span>
               <span className="resumeBtn" style={resumeBtnStyle}>
-                <a href={Resume} style={aTagStyle} target="_blank">Download Resume</a>
+                <a href={Resume} style={aTagStyle} target="_blank" rel="noreferrer">Download Resume</a>
               </span>
               <SkillsExp />
             </>
