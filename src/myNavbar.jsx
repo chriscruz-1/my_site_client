@@ -7,8 +7,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Work from './work';
 import About from './about';
 import Home from './home';
-import Orm from './orm';
-import WeatherDashboard from './weather_dashboard';
+import OneRepMaxCalc from './projects/oneRepMaxCalc';
+import PokemonPartySaver from './projects/PokemonPartySaver/pokemonPartySaver';
 import {
   BrowserRouter as Router,
   Switch,
@@ -30,9 +30,8 @@ const MyNavbar = () => {
                   <Nav.Link href="/about">About</Nav.Link>
                   <Nav.Link href="/work">Work</Nav.Link>
                   <NavDropdown title="Projects" id="navbarScrollingDropdown">
-                    <NavDropdown.Item href="/orm">1 Rep Max Calculator</NavDropdown.Item>
-                    <NavDropdown.Item href="/weather_dashboard">Weather Dashboard (In progress)</NavDropdown.Item>
-                    <NavDropdown.Item href="/fitnesstracker">Fitness Dashboard (In progress)</NavDropdown.Item>
+                    <NavDropdown.Item href="/one_rep_max_calc">1 Rep Max Calculator</NavDropdown.Item>
+                    <NavDropdown.Item href="/pokemon_party_saver">Pokemon Party Saver (In progress)</NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
               </Container>
@@ -67,8 +66,8 @@ const MyNavbar = () => {
           <Route exact path="/" component={Home}/>
           <Route path="/about" component={About}/>
           <Route path="/work" component={Work}/>
-          <Route path="/orm" component={Orm}/>
-          <Route path="/weather_dashboard" component={WeatherDashboard}/>
+          <Route path="/one_rep_max_calc" component={OneRepMaxCalc}/>
+          <Route path="/pokemon_party_saver" component={PokemonPartySaver}/>
           <Redirect to="/"/>
         </Switch>
     </Router>

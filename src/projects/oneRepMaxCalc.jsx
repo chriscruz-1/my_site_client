@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row'
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 
-const Orm = ({
+const OneRepMaxCalc = ({
   appTitleStyle = {textAlign: "center"},
   appContainerStyle = {marginTop: "20px"},
   maxWeight = 500,
@@ -132,4 +132,4 @@ const Orm = ({
   );  
 };
 
-export default Orm;
+export default OneRepMaxCalc;
