@@ -8,7 +8,16 @@ import Card from 'react-bootstrap/Card';
 
 const PokemonPartySaver = ({
   appTitleStyle = {textAlign: "center"},
-  inputStyle = {margin: "10px"}
+  inputStyle = {margin: "10px"},
+  cardStyles = {
+    img: {
+      width: "60%",
+      height: "auto",
+      margin: "0 auto"
+    },
+    title: {textAlign: "center"},
+    body: {textAlign: "center"}
+  }
 }) => {
   let [lookup, setLookup] = useState(null);
   let [searchBy, setSearchBy] = useState(null);
@@ -61,7 +70,18 @@ const PokemonPartySaver = ({
             <Col>
               <>
                 <Card>
-                  <Card.Img src={data.sprites.front_default}></Card.Img>
+                  <Card.Img style={cardStyles.img} src={data.sprites.front_default}></Card.Img>
+                  <Card.Body>
+                    <Card.Title style={cardStyles.title}>{data.name.charAt(0).toUpperCase() + data.name.slice(1)}</Card.Title>
+                    <Card.Text style={cardStyles.body}>
+                      <>
+                        <p>ID: {data.id}</p>
+                        <p>Type(s): {data.types.map(t => 
+                          <span>{t.type.name} </span>)}
+                        </p>
+                      </>
+                    </Card.Text>
+                  </Card.Body>
                 </Card>
               </>
             </Col>
