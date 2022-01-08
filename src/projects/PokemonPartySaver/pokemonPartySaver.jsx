@@ -11,7 +11,7 @@ const PokemonPartySaver = ({
   inputStyle = {margin: "10px"},
   cardStyles = {
     img: {
-      width: "60%",
+      width: "40%",
       height: "auto",
       margin: "0 auto"
     },
@@ -75,10 +75,16 @@ const PokemonPartySaver = ({
                     <Card.Title style={cardStyles.title}>{data.name.charAt(0).toUpperCase() + data.name.slice(1)}</Card.Title>
                     <Card.Text style={cardStyles.body}>
                       <>
-                        <p>ID: {data.id}</p>
-                        <p>Type(s): {data.types.map(t => 
+                        <p><strong>ID: </strong>{data.id}</p>
+                        <p><strong>Type(s): </strong>{data.types.map(t => 
                           <span>{t.type.name} </span>)}
                         </p>
+                        <p><strong>Abilities: </strong>{data.abilities.map(a => 
+                          <span>{a.ability.name} </span>)}
+                        </p>
+                        <p><strong>Base Stats: </strong></p>
+                        {data.stats.map(s => 
+                          <span><strong>{s.stat.name}: </strong>{s.base_stat}, </span>)}
                       </>
                     </Card.Text>
                   </Card.Body>
