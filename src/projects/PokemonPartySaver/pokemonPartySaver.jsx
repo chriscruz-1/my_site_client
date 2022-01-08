@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Alert from 'react-bootstrap/Alert';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 const PokemonPartySaver = ({
-  appTitleStyle = {textAlign: "center"},
+  appTitleStyle = {textAlign: "center", marginTop: "10px"},
   inputStyle = {margin: "10px"},
   cardStyles = {
     img: {
@@ -63,6 +64,12 @@ const PokemonPartySaver = ({
   return(
     <>
       <h1 style={appTitleStyle}>Welcome to the Pokemon Party Saver!</h1>
+      <Alert variant="secondary" style={appTitleStyle}>
+        <ul style={{listStyleType: "none"}}>
+          <li>This application lets you lookup different Pokemon, their abilities, and moves.</li>
+          <li>It also lets you save your favorite Pokemon teams.</li>
+        </ul>
+      </Alert>
       <h2 style={appTitleStyle}>Pokedex Lookup</h2>
       <Container>
         <Row>
@@ -84,7 +91,7 @@ const PokemonPartySaver = ({
                         </p>
                         <p><strong>Base Stats: </strong></p>
                         {data.stats.map(s => 
-                          <span><strong>{s.stat.name}: </strong>{s.base_stat}, </span>)}
+                          <span><strong>{s.stat.name}: </strong>{s.base_stat} </span>)}
                       </>
                     </Card.Text>
                   </Card.Body>
