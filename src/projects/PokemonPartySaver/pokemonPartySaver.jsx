@@ -6,6 +6,8 @@ import Alert from 'react-bootstrap/Alert';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import ToggleButton from 'react-bootstrap/ToggleButton';
+import { ButtonGroup } from 'react-bootstrap';
 
 const PokemonPartySaver = ({
   appTitleStyle = {textAlign: "center", marginTop: "10px"},
@@ -26,6 +28,7 @@ const PokemonPartySaver = ({
   let [data, setData] = useState(null);
   let [showAppDesc, setShowAppDesc] = useState(true);
   let [showWarning, setShowWarning] = useState(true);
+  let [appMode, setAppMode] = useState('lookup');
 
   const lookupHandler = (event) => {
     setLookup(event.target.value);
@@ -59,6 +62,11 @@ const PokemonPartySaver = ({
     }
   };
 
+  let appModeOptions = [
+    {name: 'Pokedex Lookup', value: 'lookup'},
+    {name: 'Party Saver', value: 'party'}
+  ];
+
   return(
     <>
       <h1 style={appTitleStyle}>Welcome to the Pokemon Party Saver!</h1>
@@ -81,6 +89,26 @@ const PokemonPartySaver = ({
           </ul>
         </Alert>
       }
+      <Row>
+        <Col style={{textAlign: "center"}}>
+          <ButtonGroup>
+            {appModeOptions.map((am, i) => (
+              <ToggleButton
+                key={i}
+                id={`radio-${i}`}
+                type='radio'
+                variant={appMode === am.value ? 'outline-success': 'outline-secondary'}
+                name='radio'
+                value={am.value}
+                checked={appMode === am.value}
+                onChange={(e) => setAppMode(e.currentTarget.value)}
+              >
+                {am.name}
+              </ToggleButton>
+            ))}
+          </ButtonGroup>
+        </Col>
+      </Row>
       <h2 style={appTitleStyle}>Pokedex Lookup</h2>
       <Container>
         <Row>
