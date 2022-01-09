@@ -24,6 +24,7 @@ const PokemonPartySaver = ({
   let [searchBy, setSearchBy] = useState(null);
   let [pokemonName, setPokemonName] = useState(null);
   let [data, setData] = useState(null);
+  let [showWarning, setShowWarning] = useState(true);
 
   const lookupHandler = (event) => {
     setLookup(event.target.value);
@@ -64,8 +65,19 @@ const PokemonPartySaver = ({
         <ul style={{listStyleType: "none"}}>
           <li>This application lets you lookup different Pokemon, their abilities, and moves.</li>
           <li>It also lets you save your favorite Pokemon teams.</li>
+          <li>This application is powered by <a href="https://pokeapi.co">PokeApi</a></li>
         </ul>
       </Alert>
+      {showWarning && 
+        <Alert variant="danger" style={appTitleStyle} onClose={() => setShowWarning(false)} dismissible>
+          <ul style={{listStyleType: "none"}}>
+            <li>Per the PokeApi website: "Sword and Shield data might be inaccurate and lacking in various aspects due to 
+              the fact that it is not taken directly from Nintendo's Pokemon ROMs. If you spot any mistake, 
+              please report it <a href="https://github.com/PokeAPI/pokedex/issues">here</a>"
+            </li>
+          </ul>
+        </Alert>
+      }
       <h2 style={appTitleStyle}>Pokedex Lookup</h2>
       <Container>
         <Row>
