@@ -31,7 +31,7 @@ const MyNavbar = () => {
                   <Nav.Link href="/work">Work</Nav.Link>
                   <NavDropdown title="Projects" id="navbarScrollingDropdown">
                     <NavDropdown.Item href="/one_rep_max_calc">1 Rep Max Calculator</NavDropdown.Item>
-                    <NavDropdown.Item href="/pokemon_party_saver">Pokemon Party Saver (In progress)</NavDropdown.Item>
+                    <NavDropdown.Item href="/pokemon_party_saver">Pokemon Party Saver</NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
               </Container>
