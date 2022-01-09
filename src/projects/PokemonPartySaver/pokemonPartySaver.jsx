@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -24,10 +24,6 @@ const PokemonPartySaver = ({
   let [searchBy, setSearchBy] = useState(null);
   let [pokemonName, setPokemonName] = useState(null);
   let [data, setData] = useState(null);
-
-  useEffect(() => {
-    console.log(data)
-  }, [data]);
 
   const lookupHandler = (event) => {
     setLookup(event.target.value);
@@ -81,18 +77,33 @@ const PokemonPartySaver = ({
                   <Card.Body>
                     <Card.Title style={cardStyles.title}>{data.name.charAt(0).toUpperCase() + data.name.slice(1)}</Card.Title>
                     <Card.Text style={cardStyles.body}>
-                      <>
-                        <p><strong>ID: </strong>{data.id}</p>
-                        <p><strong>Type(s): </strong>{data.types.map(t => 
-                          <span>{t.type.name} </span>)}
-                        </p>
-                        <p><strong>Abilities: </strong>{data.abilities.map(a => 
-                          <span>{a.ability.name} </span>)}
-                        </p>
-                        <p><strong>Base Stats: </strong></p>
-                        {data.stats.map(s => 
-                          <span><strong>{s.stat.name}: </strong>{s.base_stat} </span>)}
-                      </>
+                      <Container>
+                        <Row>
+                          <Col><strong>ID: </strong>{data.id}</Col>
+                          <Col>
+                            <Row>
+                              <strong>Type(s): </strong>
+                              {data.types.map(t => 
+                                <Col>{t.type.name}</Col>)}
+                            </Row>
+                          </Col>
+                          <Col>
+                            <Row>
+                              <strong>Abilities: </strong>
+                              {data.abilities.map(a => 
+                                <Col>{a.ability.name}</Col>)}
+                            </Row>
+                          </Col>
+                        </Row>
+                        <br></br>
+                        <Row>
+                          <strong>Base Stats: </strong>
+                        </Row>
+                        <Row>
+                          {data.stats.map(s => 
+                            <Col><strong>{s.stat.name}: </strong>{s.base_stat}</Col>)}
+                        </Row>
+                      </Container>
                     </Card.Text>
                   </Card.Body>
                 </Card>
