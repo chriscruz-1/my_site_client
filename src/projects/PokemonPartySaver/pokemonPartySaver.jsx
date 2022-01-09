@@ -24,6 +24,7 @@ const PokemonPartySaver = ({
   let [searchBy, setSearchBy] = useState(null);
   let [pokemonName, setPokemonName] = useState(null);
   let [data, setData] = useState(null);
+  let [showAppDesc, setShowAppDesc] = useState(true);
   let [showWarning, setShowWarning] = useState(true);
 
   const lookupHandler = (event) => {
@@ -61,13 +62,15 @@ const PokemonPartySaver = ({
   return(
     <>
       <h1 style={appTitleStyle}>Welcome to the Pokemon Party Saver!</h1>
-      <Alert variant="secondary" style={appTitleStyle}>
+      {showAppDesc &&
+        <Alert variant="secondary" style={appTitleStyle} onClose={() => setShowAppDesc(false)} dismissible>
         <ul style={{listStyleType: "none"}}>
           <li>This application lets you lookup different Pokemon, their abilities, and moves.</li>
           <li>It also lets you save your favorite Pokemon teams.</li>
           <li>This application is powered by <a href="https://pokeapi.co">PokeApi</a></li>
         </ul>
       </Alert>
+      }
       {showWarning && 
         <Alert variant="danger" style={appTitleStyle} onClose={() => setShowWarning(false)} dismissible>
           <ul style={{listStyleType: "none"}}>
