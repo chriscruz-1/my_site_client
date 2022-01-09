@@ -12,7 +12,7 @@ const PokemonPartySaver = ({
   inputStyle = {margin: "10px"},
   cardStyles = {
     img: {
-      width: "40%",
+      width: "50%",
       height: "auto",
       margin: "0 auto"
     },
