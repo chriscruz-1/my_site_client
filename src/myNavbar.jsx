@@ -8,7 +8,7 @@ import Work from './work';
 import About from './about';
 import Home from './home';
 import OneRepMaxCalc from './projects/oneRepMaxCalc';
-import PokemonPartySaver from './projects/PokemonPartySaver/pokemonPartySaver';
+import PpsHome from './projects/PokemonPartySaver/pps_home';
 import {
   BrowserRouter as Router,
   Switch,
@@ -67,7 +67,7 @@ const MyNavbar = () => {
           <Route path="/about" component={About}/>
           <Route path="/work" component={Work}/>
           <Route path="/one_rep_max_calc" component={OneRepMaxCalc}/>
-          <Route path="/pokemon_party_saver" component={PokemonPartySaver}/>
+          <Route path="/pokemon_party_saver" component={PpsHome}/>
           <Redirect to="/"/>
         </Switch>
     </Router>
