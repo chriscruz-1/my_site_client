@@ -22,7 +22,7 @@ const PokemonPartySaver = ({
 }) => {
   let [lookup, setLookup] = useState(null);
   let [searchBy, setSearchBy] = useState(null);
-  let [pokemonName, setPokemonName] = useState(null);
+  let [pokemonNameOrId, setPokemonNameOrId] = useState(null);
   let [data, setData] = useState(null);
   let [showAppDesc, setShowAppDesc] = useState(true);
   let [showWarning, setShowWarning] = useState(true);
@@ -35,8 +35,8 @@ const PokemonPartySaver = ({
     setSearchBy(event.target.value);
   };
 
-  const pokemonNameHandler = (event) => {
-    setPokemonName(event.target.value)
+  const pokemonNameOrIdHandler = (event) => {
+    setPokemonNameOrId(event.target.value)
   }
 
   const fetchData = async (url = '', lookup = '', name = '' ) => {
@@ -45,7 +45,7 @@ const PokemonPartySaver = ({
   };
 
   const returnResults = async () => {
-    let results = await fetchData('https://pokeapi.co/api/v2', `${lookup}`, pokemonName);
+    let results = await fetchData('https://pokeapi.co/api/v2', `${lookup}`, pokemonNameOrId);
     return results;
   };
 
@@ -146,7 +146,16 @@ const PokemonPartySaver = ({
                 {searchBy === "name" && 
                   <>
                     <Form.Label>Name: </Form.Label>
-                    <Form.Control id='pokemonName' style={inputStyle} placeholder="Enter Pokemon's Name" onChange={pokemonNameHandler}/>
+                    <Form.Control style={inputStyle} placeholder="Enter Pokemon's Name" onChange={pokemonNameOrIdHandler}/>
+                    <Button variant="primary" type="submit" size='md'>
+                      Submit
+                    </Button>
+                  </>
+                }
+                {searchBy === "number" && 
+                  <>
+                    <Form.Label>Name: </Form.Label>
+                    <Form.Control style={inputStyle} placeholder="Enter Pokemon's Number" onChange={pokemonNameOrIdHandler}/>
                     <Button variant="primary" type="submit" size='md'>
                       Submit
                     </Button>
