@@ -57,7 +57,7 @@ const SkillsExp = () => {
           <tr>
             <th>UC Davis</th>
             <td>Web Developer</td>
-            <td>Apr 2020 - Jan 2021 | Aug 2021 - Present</td>
+            <td>Apr 2020 - Jan 2021 | Aug - Dec 2021</td>
           </tr>
           <tr>
             <th>Intel</th>

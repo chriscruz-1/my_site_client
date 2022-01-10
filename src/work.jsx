@@ -47,7 +47,7 @@ const Work = ({
               </Card.Text>
               {/* <Button variant="primary">More details</Button> */}
             </Card.Body>
-            <Card.Footer className="text-muted">April - January 2020 | August 2021 - Present</Card.Footer>
+            <Card.Footer className="text-muted">April - January 2020 | August - Dec 2021</Card.Footer>
           </Card>
         </Col>
         <Col md={6}>
