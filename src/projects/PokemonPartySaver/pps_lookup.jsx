@@ -6,6 +6,9 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
+// For output sanitation
+import DOMPurify from 'dompurify';
+
 const PpsLookup = ({
   appTitleStyle = {textAlign: "center", marginTop: "10px"},
   inputStyle = {margin: "10px"},
@@ -33,11 +36,11 @@ const PpsLookup = ({
   };
 
   const pokemonNameOrIdHandler = (event) => {
-    setPokemonNameOrId(event.target.value)
+    setPokemonNameOrId(DOMPurify.sanitize(event.target.value));
   }
 
-  const fetchData = async (url = '', lookup = '', name = '' ) => {
-    const response = await fetch(`${url}/${lookup}/${name.toLowerCase()}`);
+  const fetchData = async (url = '', lookup = '', nameOrId = '' ) => {
+    const response = await fetch(`${url}/${lookup}/${nameOrId.toLowerCase()}`);
     return response.json();
   };
 
