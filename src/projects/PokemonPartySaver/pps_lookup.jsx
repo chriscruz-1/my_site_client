@@ -71,10 +71,10 @@ const PpsLookup = ({
       <h2 style={appTitleStyle}>Lookup</h2>
       {showAppDesc &&
         <Alert variant="secondary" style={appTitleStyle} onClose={() => setShowAppDesc(false)} dismissible>
-        <ul style={{listStyleType: "none"}}>
-          <li>Look up different Pokemon, abilities, and moves.</li>
-        </ul>
-      </Alert>
+          <ul style={{listStyleType: "none"}}>
+            <li>Look up different Pokemon, abilities, and moves.</li>
+          </ul>
+        </Alert>
       }
       <Container>
         <Row>
