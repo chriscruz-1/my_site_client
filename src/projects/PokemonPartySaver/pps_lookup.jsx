@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Alert from 'react-bootstrap/Alert';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -26,6 +27,7 @@ const PpsLookup = ({
     body: {textAlign: "center"}
   }
 }) => {
+  let [showAppDesc, setShowAppDesc] = useState(true);
   let [lookup, setLookup] = useState(null);
   let [searchBy, setSearchBy] = useState(null);
   let [pokemonNameOrId, setPokemonNameOrId] = useState(null);
@@ -67,6 +69,13 @@ const PpsLookup = ({
   return(
     <>
       <h2 style={appTitleStyle}>Lookup</h2>
+      {showAppDesc &&
+        <Alert variant="secondary" style={appTitleStyle} onClose={() => setShowAppDesc(false)} dismissible>
+        <ul style={{listStyleType: "none"}}>
+          <li>Look up different Pokemon, abilities, and moves.</li>
+        </ul>
+      </Alert>
+      }
       <Container>
         <Row>
           {/* Rendering the results */}
