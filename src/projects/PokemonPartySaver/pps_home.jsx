@@ -15,7 +15,7 @@ const PpsHome = ({
   let [appMode, setAppMode] = useState('lookup');
 
   let appModeOptions = [
-    {name: 'Pokedex Lookup', value: 'lookup'},
+    {name: 'Lookup', value: 'lookup'},
     {name: 'Party Saver', value: 'party'}
   ];
 
@@ -25,8 +25,9 @@ const PpsHome = ({
       {showAppDesc &&
         <Alert variant="secondary" style={appTitleStyle} onClose={() => setShowAppDesc(false)} dismissible>
         <ul style={{listStyleType: "none"}}>
-          <li>This application lets you lookup different Pokemon, their abilities, and moves.</li>
-          <li>It also lets you save your favorite Pokemon teams.</li>
+          <li>This application is your one stop source for all your competitive Pokemon needs!</li>
+          <li>You can look up different Pokemon, their abilities, and moves.</li>
+          <li>You can also create and save your favorite Pokemon teams.</li>
           <li>This application is powered by <a href="https://pokeapi.co">PokeApi</a></li>
         </ul>
       </Alert>
@@ -35,7 +36,7 @@ const PpsHome = ({
         <Alert variant="danger" style={appTitleStyle} onClose={() => setShowWarning(false)} dismissible>
           <ul style={{listStyleType: "none"}}>
             <li>Per the PokeApi website: "Sword and Shield data might be inaccurate and lacking in various aspects due to 
-              the fact that it is not taken directly from Nintendo's Pokemon ROMs. If you spot any mistake, 
+              the fact that it is not taken directly from Nintendo's Pokemon ROMs. If you spot any mistakes with the results returned, 
               please report it <a href="https://github.com/PokeAPI/pokedex/issues">here</a>"
             </li>
           </ul>
@@ -48,10 +49,10 @@ const PpsHome = ({
             {appModeOptions.map((am, i) => (
               <ToggleButton
                 key={i}
-                id={`radio-${i}`}
+                id={`appMode-${i}`}
                 type='radio'
                 variant={appMode === am.value ? 'outline-success': 'outline-secondary'}
-                name='radio'
+                name='appModes'
                 value={am.value}
                 checked={appMode === am.value}
                 onChange={(e) => setAppMode(e.currentTarget.value)}
