@@ -8,7 +8,7 @@ import Work from './work';
 import About from './about';
 import Home from './home';
 import OneRepMaxCalc from './projects/oneRepMaxCalc';
-import PpsHome from './projects/PokemonPartySaver/pps_home';
+import PoHome from './projects/PokemonOneSource/po_home';
 import {
   BrowserRouter as Router,
   Switch,
@@ -31,7 +31,7 @@ const MyNavbar = () => {
                   <Nav.Link href="/work">Work</Nav.Link>
                   <NavDropdown title="Projects" id="navbarScrollingDropdown">
                     <NavDropdown.Item href="/one_rep_max_calc">1 Rep Max Calculator</NavDropdown.Item>
-                    <NavDropdown.Item href="/pokemon_party_saver">Pokemon Party Saver</NavDropdown.Item>
+                    <NavDropdown.Item href="/pokemon_onesource">Pokemon OneSource</NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
               </Container>
@@ -67,7 +67,7 @@ const MyNavbar = () => {
           <Route path="/about" component={About}/>
           <Route path="/work" component={Work}/>
           <Route path="/one_rep_max_calc" component={OneRepMaxCalc}/>
-          <Route path="/pokemon_party_saver" component={PpsHome}/>
+          <Route path="/pokemon_onesource" component={PoHome}/>
           <Redirect to="/"/>
         </Switch>
     </Router>
