@@ -6,6 +6,10 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
+// For the toggle buttons
+import ToggleButton from 'react-bootstrap/ToggleButton';
+import { ButtonGroup } from 'react-bootstrap';
+
 // For output sanitation
 import DOMPurify from 'dompurify';
 
@@ -27,13 +31,14 @@ const PpsLookup = ({
   let [pokemonNameOrId, setPokemonNameOrId] = useState(null);
   let [data, setData] = useState(null);
 
-  const lookupHandler = (event) => {
-    setLookup(event.target.value);
-  };
+  let lookupOptions = [
+    {name: 'Pokemon', value: 'pokemon'}
+  ];
 
-  const searchByHandler = (event) => {
-    setSearchBy(event.target.value);
-  };
+  let searchByOptions = [
+    {name: 'Name', value: 'name'},
+    {name: 'Number', value: 'number'}
+  ];
 
   const pokemonNameOrIdHandler = (event) => {
     setPokemonNameOrId(DOMPurify.sanitize(event.target.value));
@@ -61,9 +66,10 @@ const PpsLookup = ({
 
   return(
     <>
-      <h2 style={appTitleStyle}>Pokedex Lookup</h2>
+      <h2 style={appTitleStyle}>Lookup</h2>
       <Container>
         <Row>
+          {/* Rendering the results */}
           {data !== null && 
             <Col>
               <>
@@ -105,44 +111,86 @@ const PpsLookup = ({
               </>
             </Col>
           }
+
+          {/* Form for user's query */}
           <Col>
-            <Form onSubmit={submitHandler}>
-              <Form.Group>
-                <Form.Label>Lookup: </Form.Label>
-                <Form.Select size="md" style={inputStyle} onChange={lookupHandler}>
-                  <option value="null">Select...</option>
-                  <option value="pokemon">Pokemon</option>
-                </Form.Select>
-                {lookup === "pokemon" && 
-                  <>
-                    <Form.Label>Search by: </Form.Label>
-                    <Form.Select size="md" style={inputStyle} onChange={searchByHandler}>
-                      <option value="null">Select...</option>
-                      <option value="name">Name</option>
-                      <option value="number">Number</option>
-                    </Form.Select>
-                  </>
-                }
-                {searchBy === "name" && 
-                  <>
-                    <Form.Label>Name: </Form.Label>
-                    <Form.Control style={inputStyle} placeholder="Enter Pokemon's Name" onChange={pokemonNameOrIdHandler}/>
-                    <Button variant="primary" type="submit" size='md'>
-                      Submit
-                    </Button>
-                  </>
-                }
-                {searchBy === "number" && 
-                  <>
-                    <Form.Label>Name: </Form.Label>
-                    <Form.Control style={inputStyle} placeholder="Enter Pokemon's Number" onChange={pokemonNameOrIdHandler}/>
-                    <Button variant="primary" type="submit" size='md'>
-                      Submit
-                    </Button>
-                  </>
-                }
-              </Form.Group>
-            </Form>
+            <Container>
+              <Form onSubmit={submitHandler}>
+                <Form.Group>
+                  <Row>
+                    <Col style={lookup === null ? appTitleStyle : null}>
+                      <label for="lookupButtonGroup">Lookup:</label>
+                      {" "}
+                      <Row>
+                        <ButtonGroup id="lookupButtonGroup">
+                          {lookupOptions.map((l, i) => (
+                            <ToggleButton
+                              key={i}
+                              id={`lookupOption-${i}`}
+                              type='radio'
+                              variant={lookup === l.value ? 'outline-success': 'outline-secondary'}
+                              name='lookupOptions'
+                              value={l.value}
+                              checked={lookup === l.value}
+                              onChange={(e) => setLookup(e.currentTarget.value)}
+                            >
+                              {l.name}
+                            </ToggleButton>
+                          ))}
+                        </ButtonGroup>
+                      </Row>
+                    </Col>
+                    {lookup === "pokemon" && 
+                      <Col>
+                        <Row>
+                        <>
+                          <label for="searchByButtonGroup">Search By:</label>
+                          {" "}
+                          <ButtonGroup id="searchByButtonGroup">
+                            {searchByOptions.map((s, i) => (
+                              <ToggleButton
+                                key={i}
+                                id={`searchByOption-${i}`}
+                                type='radio'
+                                variant={searchBy === s.value ? 'outline-success': 'outline-secondary'}
+                                name='searchByOptions'
+                                value={s.value}
+                                checked={searchBy === s.value}
+                                onChange={(e) => setSearchBy(e.currentTarget.value)}
+                              >
+                                {s.name}
+                              </ToggleButton>
+                            ))}
+                          </ButtonGroup>
+                        </>   
+                        </Row>
+      
+                      </Col>
+                    }
+                  </Row>
+                  {searchBy === "name" && 
+                    <>
+                      <br></br>
+                      <Form.Label>Name: </Form.Label>
+                      <Form.Control style={inputStyle} placeholder="Enter Pokemon's Name" onChange={pokemonNameOrIdHandler}/>
+                      <Button variant="primary" type="submit" size='md'>
+                        Submit
+                      </Button>
+                    </>
+                  }
+                  {searchBy === "number" && 
+                    <>
+                      <br></br>
+                      <Form.Label>Number: </Form.Label>
+                      <Form.Control style={inputStyle} placeholder="Enter Pokemon's Number" onChange={pokemonNameOrIdHandler}/>
+                      <Button variant="primary" type="submit" size='md'>
+                        Submit
+                      </Button>
+                    </>
+                  }
+                </Form.Group>
+              </Form>
+            </Container>
           </Col>
         </Row>
       </Container>
