@@ -6,6 +6,7 @@ import ToggleButton from 'react-bootstrap/ToggleButton';
 import { ButtonGroup } from 'react-bootstrap';
 
 import PpsLookup from './pps_lookup';
+import PartySaver from './pps_party_saver';
 
 const PpsHome = ({
   appTitleStyle = {textAlign: "center", marginTop: "10px"},
@@ -26,8 +27,6 @@ const PpsHome = ({
         <Alert variant="secondary" style={appTitleStyle} onClose={() => setShowAppDesc(false)} dismissible>
         <ul style={{listStyleType: "none"}}>
           <li>This application is your one stop source for all your competitive Pokemon needs!</li>
-          <li>You can look up different Pokemon, their abilities, and moves.</li>
-          <li>You can also create and save your favorite Pokemon teams.</li>
           <li>This application is powered by <a href="https://pokeapi.co">PokeApi</a></li>
         </ul>
       </Alert>
@@ -66,7 +65,7 @@ const PpsHome = ({
       {appMode === 'lookup' ? 
         <PpsLookup/>
         :
-        null
+        <PartySaver/>
       }
     </>
   );
