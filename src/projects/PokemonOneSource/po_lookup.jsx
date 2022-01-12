@@ -14,7 +14,7 @@ import { ButtonGroup } from 'react-bootstrap';
 // For output sanitation
 import DOMPurify from 'dompurify';
 
-const PpsLookup = ({
+const Lookup = ({
   appTitleStyle = {textAlign: "center", marginTop: "10px"},
   inputStyle = {margin: "10px"},
   cardStyles = {
@@ -68,7 +68,6 @@ const PpsLookup = ({
 
   return(
     <>
-      <h2 style={appTitleStyle}>Lookup</h2>
       {showAppDesc &&
         <Alert variant="secondary" style={appTitleStyle} onClose={() => setShowAppDesc(false)} dismissible>
           <ul style={{listStyleType: "none"}}>
@@ -207,4 +206,4 @@ const PpsLookup = ({
   );
 };
 
-export default PpsLookup;
+export default Lookup;

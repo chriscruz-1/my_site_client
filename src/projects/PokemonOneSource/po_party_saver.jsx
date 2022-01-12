@@ -7,7 +7,6 @@ const PartySaver = ({
   let [showAppDesc, setShowAppDesc] = useState(true);
   return(
     <>
-      <h2 style={appTitleStyle}>Party Saver</h2>
       {showAppDesc &&
         <Alert variant="secondary" style={appTitleStyle} onClose={() => setShowAppDesc(false)} dismissible>
         <ul style={{listStyleType: "none"}}>
