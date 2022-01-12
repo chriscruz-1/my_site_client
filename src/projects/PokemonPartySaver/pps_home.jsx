@@ -25,11 +25,11 @@ const PpsHome = ({
       <h1 style={appTitleStyle}>Welcome to the Pokemon Party Saver!</h1>
       {showAppDesc &&
         <Alert variant="secondary" style={appTitleStyle} onClose={() => setShowAppDesc(false)} dismissible>
-        <ul style={{listStyleType: "none"}}>
-          <li>This application is your one stop source for all your competitive Pokemon needs!</li>
-          <li>This application is powered by <a href="https://pokeapi.co">PokeApi</a></li>
-        </ul>
-      </Alert>
+          <ul style={{listStyleType: "none"}}>
+            <li>This application is your one stop source for all your competitive Pokemon needs!</li>
+            <li>This application is powered by <a href="https://pokeapi.co">PokeApi</a></li>
+          </ul>
+        </Alert>
       }
       {showWarning && 
         <Alert variant="danger" style={appTitleStyle} onClose={() => setShowWarning(false)} dismissible>
