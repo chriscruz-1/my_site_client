@@ -7,6 +7,7 @@ import { ButtonGroup } from 'react-bootstrap';
 
 import Lookup from './po_lookup';
 import PartySaver from './po_party_saver';
+import Footer from './po_footer';
 
 const PoHome = ({
   appTitleStyle = {textAlign: "center", marginTop: "10px"},
@@ -67,6 +68,9 @@ const PoHome = ({
         :
         <PartySaver />
       }
+      <Row>
+        <Footer />
+      </Row>
     </>
   );
 };
