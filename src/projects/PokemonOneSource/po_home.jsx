@@ -23,7 +23,7 @@ const PoHome = ({
 
   return(
     <>
-      <h1 style={appTitleStyle}>Welcome to the Pokemon OneSource!</h1>
+      <h1 style={appTitleStyle}>Welcome to the Pokemon One Source!</h1>
       {showAppDesc &&
         <Alert variant="secondary" style={appTitleStyle} onClose={() => setShowAppDesc(false)} dismissible>
           <ul style={{listStyleType: "none"}}>

@@ -7,7 +7,7 @@ const Footer = () => {
       marginBottom: 50,
       textAlign: 'center'
     }}>
-      Pokemon OneSource ©
+      Pokemon One Source ©
     </h5>
   );
 };

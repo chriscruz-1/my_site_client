@@ -31,7 +31,7 @@ const MyNavbar = () => {
                   <Nav.Link href="/work">Work</Nav.Link>
                   <NavDropdown title="Projects" id="navbarScrollingDropdown">
                     <NavDropdown.Item href="/one_rep_max_calc">1 Rep Max Calculator</NavDropdown.Item>
-                    <NavDropdown.Item href="/pokemon_onesource">Pokemon OneSource</NavDropdown.Item>
+                    <NavDropdown.Item href="/pokemon_one_source">Pokemon One Source</NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
               </Container>
@@ -67,7 +67,7 @@ const MyNavbar = () => {
           <Route path="/about" component={About}/>
           <Route path="/work" component={Work}/>
           <Route path="/one_rep_max_calc" component={OneRepMaxCalc}/>
-          <Route path="/pokemon_onesource" component={PoHome}/>
+          <Route path="/pokemon_one_source" component={PoHome}/>
           <Redirect to="/"/>
         </Switch>
     </Router>
